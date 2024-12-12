@@ -5,20 +5,19 @@ version: 1.0.0
 
 environment:
   sdk: '>=3.0.0 <4.0.0'
-  flutter: '>=3.24.0'
 
 dependencies:
   fl_amap_map:
     path: ../
   flutter:
     sdk: flutter
-  fl_extended: ^1.5.0
-  fl_dio: ^1.2.2
-  flutter_curiosity: ^6.3.1
+  fl_extended: ^1.3.1
+  fl_dio: ^1.2.1
+  flutter_curiosity: ^6.2.0
   permission_handler: ^11.3.1
 
 dev_dependencies:
-  flutter_lints: ^5.0.0
+  flutter_lints: ^4.0.0
 
 flutter:
   uses-material-design: true
