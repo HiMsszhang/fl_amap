@@ -3,9 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 part 'src/amap_geo_fence.dart';
-
 part 'src/amap_location.dart';
-
 part 'src/enum.dart';
 
 /// 设置ios&android的key
@@ -27,13 +25,7 @@ Future<bool> setAMapKey({
   if (_isAndroid) key = androidKey;
   if (_isIOS) key = iosKey;
   if (key == null) return false;
-  final bool? state = await FlAMapLocation()._channel.invokeMethod(
-      'setApiKey', {
-    'key': key,
-    'isAgree': isAgree,
-    'isContains': isContains,
-    'isShow': isShow
-  });
+  final bool? state = await FlAMapLocation()._channel.invokeMethod('setApiKey', {'key': key, 'isAgree': isAgree, 'isContains': isContains, 'isShow': isShow});
   return state == true;
 }
 
@@ -60,6 +52,5 @@ class LatLng {
   /// 经度
   double? longitude;
 
-  Map<String, dynamic> toMap() =>
-      {'latitude': latitude, 'longitude': longitude};
+  Map<String, dynamic> toMap() => {'latitude': latitude, 'longitude': longitude};
 }
